@@ -1,15 +1,8 @@
-POST http://localhost:3001/api/user HTTP/1.1
+POST http://localhost:3001/api/bed HTTP/1.1
 content-type: application/json 
 
-# {
-#   "name": "Neonatal ICU",
-#   "section": ""
-# }
-
  {
-  "email": "Williamgomez@gmail.com",
-  "password": "PASSword123",
-  "firstname": "William",
-  "minit": "",
-  "lastname": "Gomez"
+  "type": "manual",
+  "status": "Patient in discharge",
+  "description": "Patient about to be discharged. Bed will be released soon"
  }

@@ -3,7 +3,8 @@ const router = express.Router();
  
 const { createUser, getAllUsers, getOneUser, updateOneUser, deleteOneUser} = require('../controllers/user');
 const {createDepartment} = require('../controllers/department');
-const { createWard, updateOneWard } = require('../controllers/ward');
+const { createWard, updateOneWard, deleteOneWard, getAllWards, getOneWard } = require('../controllers/ward');
+const { createBed, getAllBeds, getOneBed, updateOneBed, deleteOneBed} = require('../controllers/bed')
  
  // User route
  router.post('/user', createUser);
@@ -20,6 +21,12 @@ router.post('/department', createDepartment);
 
 //Ward route
 router.post('/ward', createWard);
-router.put('/ward/:id', updateOneWard)
+router.put('/ward/:id', updateOneWard);
+router.delete('/ward/:id', deleteOneWard)
+
+//Bed route
+router.post('/bed', createBed);
+router.put('/bed/:id', updateOneBed);
+router.delete('/bed/:id', deleteOneBed);
 
 module.exports = router; 

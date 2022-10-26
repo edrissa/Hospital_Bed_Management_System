@@ -1,8 +1,8 @@
-PUT http://localhost:3001/api/ward/6352cb662638566662e0e29f
+PUT http://localhost:3001/api/ward/6352cd1607fd74a45ecd9723
  content-type: application/json
  
 {
-  "name": "Labor ward",
+  "name": "Special care unit 1 & 2",
   "section": ""
  }
 

@@ -1,12 +1,12 @@
-const Ward = require('../models/ward');
+const Bed = require('../models/bed')
 
 //create-one
-const createWard = async (req, res) => {
+const createBed = async (req, res) => {
     const content = req.body;
    
     console.log(content);
     try {
-     const user = await Ward.create({ ...content });
+     const user = await Bed.create({ ...content });
    
      return res.status(201).json({ data: user });
     } catch (error) {
@@ -16,9 +16,9 @@ const createWard = async (req, res) => {
 };
 
  //get-all
- const getAllWards = async (req, res) => {
+ const getAllBeds = async (req, res) => {
     try {
-     const users = await Ward.find({});
+     const users = await Bed.find({});
    
      return res.status(201).json({ data: users });
     } catch (error) {
@@ -28,10 +28,10 @@ const createWard = async (req, res) => {
  };
 
  //get-one
- const getOneWard = async (req, res) => {
+ const getOneBed = async (req, res) => {
     const id = req.params.id
     try {
-     const user = await Ward.findOne({ _id: id });
+     const user = await Bed.findOne({ _id: id });
    
      if (!user) {
       return res.status(400).json({ message: 'user not found' });
@@ -44,12 +44,12 @@ const createWard = async (req, res) => {
    };
 
 //update-one
-const updateOneWard = async (req, res) => {
+const updateOneBed = async (req, res) => {
     const id = req.params.id
     const content = req.body
    
     try {
-     const user = await Ward.findOneAndUpdate(
+     const user = await Bed.findOneAndUpdate(
      { _id: id },
       content,
      { new: true }
@@ -66,11 +66,11 @@ const updateOneWard = async (req, res) => {
    };
 
    //Delete one
-   const deleteOneWard = async (req, res) => {
+   const deleteOneBed = async (req, res) => {
       const id = req.params.id
      
       try {
-       const user = await Ward.findOneAndRemove({ _id: id });
+       const user = await Bed.findOneAndRemove({ _id: id });
      
        if (!user) {
         return res.status(400).json({ message: 'user not found' });
@@ -83,9 +83,9 @@ const updateOneWard = async (req, res) => {
      };
 
    module.exports = {
-    createWard,
-    getAllWards,
-    getOneWard,
-    updateOneWard,
-    deleteOneWard
+    createBed,
+    getAllBeds,
+    getOneBed,
+    updateOneBed,
+    deleteOneBed
    }

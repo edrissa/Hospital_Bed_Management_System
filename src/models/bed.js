@@ -1,19 +1,22 @@
 const mongoose = require('mongoose')
 
 const bedSchema = new mongoose.Schema({
-    bedType: {
+    type: {
         type: String,
+        trim: true,
         maxLength: 25
     },
 
-    bedStatus: {
+    status: {
         type: String,
+        trim: true,
         maxLength: 25
     },
 
-    bedStatusDescript: {
+    description: {
         type: String,
-        maxLength: 50
+        trim: true,
+        maxLength: 100
     }
 
     //To add patient ID & WARD ID(FOREIGN-KEYS)
@@ -32,5 +35,5 @@ bedSchema.set('toJSON', {
     }
 })
 
-const BED = mongoose.model('bed', bedSchema)
-module.exports = BED
+const Bed = mongoose.model('bed', bedSchema)
+module.exports = Bed
