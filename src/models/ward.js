@@ -1,8 +1,15 @@
 const mongoose = require('mongoose')
 
 const wardSchema = new mongoose.Schema({
-    wardName: {
+    name: {
         type: String,
+        trim: true,
+        maxLength: 25
+    },
+
+    section: {
+        type: String,
+        trim: true,
         maxLength: 25
     }
 
@@ -21,5 +28,5 @@ wardSchema.set('toJSON', {
     }
 })
 
-const WARD = mongoose.model("ward", wardSchema)
-module.exports = WARD
+const Ward = mongoose.model("ward", wardSchema)
+module.exports = Ward

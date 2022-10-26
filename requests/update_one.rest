@@ -1,0 +1,16 @@
+PUT http://localhost:3001/api/ward/6352cb662638566662e0e29f
+ content-type: application/json
+ 
+{
+  "name": "Labor ward",
+  "section": ""
+ }
+
+#  {
+#   "email": "edrissasaine366@gmail.com",
+#   "password": "PASSword123",
+#   "firstname": "Edrissa",
+#   "minit": "Mansour",
+#   "lastname": "Saine",
+#   "role": "Admin"
+#  }

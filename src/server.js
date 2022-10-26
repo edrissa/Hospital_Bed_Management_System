@@ -2,10 +2,10 @@ const { application } = require('express');
 const express = require('express');
 const app = express();
 
-const connect = require('./utilities/connect')
-const routes = require('./routes/user');
+const connect = require('./utilities/connect');
+const routes = require('./routes/router');
 
-app.use(express.json())
+app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 //Connect to Database

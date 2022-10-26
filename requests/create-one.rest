@@ -1,0 +1,15 @@
+POST http://localhost:3001/api/user HTTP/1.1
+content-type: application/json 
+
+# {
+#   "name": "Neonatal ICU",
+#   "section": ""
+# }
+
+ {
+  "email": "Williamgomez@gmail.com",
+  "password": "PASSword123",
+  "firstname": "William",
+  "minit": "",
+  "lastname": "Gomez"
+ }

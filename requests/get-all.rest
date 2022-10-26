@@ -1,0 +1,8 @@
+//User
+GET http://localhost:3001/api/user
+
+# //Department
+# GET http://localhost:3001/api/department
+
+//Ward
+ //GET http://localhost:3001/api/ward

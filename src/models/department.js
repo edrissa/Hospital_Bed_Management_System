@@ -1,20 +1,22 @@
 const mongoose = require('mongoose')
 
-const buildingSchema = new mongoose.Schema({
-    buildingName: {
+const departmentSchema = new mongoose.Schema({
+    name: {
         type: String,
-        maxLength: 25
+        trim: true,
+        maxlength: 25
     }, 
 
-    buildingLocation:{
+    location:{
         type: String,
-        maxLength: 25
+        trim: true,
+        maxlength: 25
     }
 }, 
 { timestamps: true }
 )
 
-buildingSchema.set('toJSON', {
+departmentSchema.set('toJSON', {
     transform: (document, returnedObject) => {
      returnedObject.id = returnedObject._id.toString()
      delete returnedObject._id
@@ -24,5 +26,5 @@ buildingSchema.set('toJSON', {
     }
 })
 
-const Building = mongoose.model('building', buildingSchema)
-module.exports = Building
+const Department = mongoose.model('department', departmentSchema)
+module.exports = Department
