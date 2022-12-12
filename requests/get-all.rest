@@ -1,8 +1,10 @@
 //User
 GET http://localhost:3001/api/user
 
-# //Department
-# GET http://localhost:3001/api/department
+### Bed
+GET http://localhost:3001/api/bed HTTP/1.1
+content-type: application/json
 
-//Ward
- //GET http://localhost:3001/api/ward
+{
+    "wardId": "63966a002a6b77452ef15bf2"
+}

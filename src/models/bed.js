@@ -17,10 +17,12 @@ const bedSchema = new mongoose.Schema({
         type: String,
         trim: true,
         maxLength: 100
+    },
+//  The bed references the ward it is located by this line
+    ward: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'ward'
     }
-
-    //To add patient ID & WARD ID(FOREIGN-KEYS)
-
 },
 { timestamps: true }
 )

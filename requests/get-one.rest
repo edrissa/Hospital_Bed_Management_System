@@ -1,1 +1,6 @@
-GET http://localhost:3001/api/user/63505b3ce4f83d206031a2cd
+GET http://localhost:3001/api/bed/639704b949ab9981bb598cab
+Content-type: application/json
+
+{
+    "wardId" : "63966a002a6b77452ef15bf2"
+}

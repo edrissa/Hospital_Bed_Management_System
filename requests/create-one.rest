@@ -1,8 +1,19 @@
-POST http://localhost:3001/api/bed HTTP/1.1
+POST http://localhost:3001/api/ward HTTP/1.1
 content-type: application/json 
 
  {
-  "type": "manual",
-  "status": "Patient in discharge",
-  "description": "Patient about to be discharged. Bed will be released soon"
+    "name" : "Dental care unit",
+    "section" : "Mixed gender"
+ }
+
+
+###
+POST http://localhost:3001/api/bed HTTP/1.1
+Content-type: application/json
+
+ {
+   "type" : "manual",
+   "status" : "Available",
+   "description" : "Bed is empty and ready to accept patient",
+   "wardId": "63966a002a6b77452ef15bf2"
  }

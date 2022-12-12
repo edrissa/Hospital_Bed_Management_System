@@ -28,5 +28,7 @@ router.delete('/ward/:id', deleteOneWard)
 router.post('/bed', createBed);
 router.put('/bed/:id', updateOneBed);
 router.delete('/bed/:id', deleteOneBed);
+router.get('/bed', getAllBeds);
+router.get('/bed', getOneBed);
 
 module.exports = router; 
